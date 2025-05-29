@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog Platform</title>
+    <link rel="stylesheet" href="/CSS/blog.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <i class="fas fa-star"></i>
+                    Blogger Pane
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/html/index.html">Home</a></li>
+                    <li><a href="#form1">Create</a></li>
+                    <li><a href="/html/view.html">Manage Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Create Your Blog easily</h2>
+            <p>Create, manage, and organize your content with our powerful and intuitive platform. Build amazing
+                experiences with ease.</p>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="form1">
+        <div class="container02">
+            <h2 class="form-title">Create New Content</h2>
+
+            <form>
+                <div class="row">
+                    <label for="id">🆔 ID :</label>
+            
+                    <input type="text" id="txtid" name="id" placeholder="Enter unique ID"> 
+                    <input type="button" value="Delete" id="deletebtn" onclick="deleteButton()">
+                    <input type="button" value="Update" id="updatebtn" onclick="updateButton()">
+                    
+                </div>
+
+                <div class="row">
+                    <label for="txttitle">📝 Title :</label>
+                    <input type="text" id="txttitle" name="title" placeholder="Enter content title">
+                </div>
+
+                <div class="row">
+                    <label for="txtcontent">📄 Content :</label>
+                    <textarea id="txtcontent" name="content" placeholder="Enter your detailed content here..."
+                        rows="6"></textarea>
+                </div>
+
+                <div class="row">
+                    <label for="txttags">🏷️ Tags :</label>
+                    <input type="text" id="txttags" name="tags" placeholder="Enter tags (comma separated)">
+                </div>
+
+                <div class="row">
+                    <label for="txtcategory">📂 Category :</label>
+                    <input type="text" id="txtcategory" name="category" placeholder="Enter category">
+                </div>
+
+                <div class="row">
+                    <label for="txtcomment_count">💬 Comment Count :</label>
+                    <input type="text" id="txtcomment_count" name="comentcount" placeholder="Number of comments">
+                </div>
+
+                <div class="datetime-group">
+                    <div class="datetime-item">
+                        <label for="create_date">📅 Create At :</label>
+                        <input type="datetime-local" id="create_date" name="create_date">
+                    </div>
+
+                    <div class="datetime-item">
+                        <label for="update_date">🔄 Update At :</label>
+                        <input type="datetime-local" id="update_date" name="update_date">
+                    </div>
+                </div>
+
+                <div class="file-upload">
+                    <label for="image_upload">🖼️ Upload Image Here :</label>
+                    <form method="POST" enctype="multipart/form-data" action="/upload">
+                        <input type="file" name="image" accept="image/*" id="image_upload">
+                    </form>
+                </div>
+
+                <div class="submit-section">
+                    <button type="submit" class="submit-btn" id="btnsubmit">
+                        <span class="btn-text">✨ Submit Content</span>
+                        <span class="btn-icon">🚀</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="/js/blog.js"></script>
+
+</body>
+
+</html>
